@@ -9,3 +9,8 @@
 
 # Include privacy notes.
 !/PRIVACY.md
+
+# Include Supabase
+!/supabase/
+!/supabase/**/
+!/supabase/**/*
