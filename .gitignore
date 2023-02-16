@@ -14,3 +14,8 @@
 !/supabase/
 !/supabase/**/
 !/supabase/**/*
+
+# Include github ci
+!/.github/
+!/.github/**/
+!/.github/**/*.yml
