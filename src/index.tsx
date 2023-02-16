@@ -2,7 +2,7 @@
 import { render } from "solid-js/web";
 import { Router } from "@solidjs/router";
 import App from "./App";
-import "./@tailwind.css";
+import "./assets/@tailwind.css";
 
 render(
 	() => (
