@@ -9,3 +9,32 @@
 
 # Include privacy notes.
 !/PRIVACY.md
+
+# Include VS Code settings.
+!/.vscode/
+!/.vscode/settings.json
+!/.vscode/extensions.json
+
+# Include frontend config files.
+!/.prettierrc.json
+!/package.json
+!/pnpm-lock.yaml
+!/postcss.config.js
+!/tailwind.config.js
+!/tsconfig.json
+!/vite.config.ts
+
+# Include frontend static files.
+!/public/
+!/public/**/
+!/public/**/*
+/public/**/.DS_Store
+
+# Include frontend source files.
+!/index.html
+!/src/
+!/src/**/
+!/src/**/*.ts
+!/src/**/*.tsx
+!/src/assets/*
+/src/assets/.DS_Store
