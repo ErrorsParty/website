@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"] {
+		-webkit-appearance: none;
+		-moz-appearance: textfield !important;
+		margin: 0;
+	}
+}
+
+.seatingchart-scrollbar::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+.seatingchart-scrollbar::-webkit-scrollbar-track,
+.seatingchart-scrollbar::-webkit-scrollbar-corner {
+	background-color: #d4d4d4;
+}
+
+.seatingchart-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #a3a3a3;
+}
+
+.seatingchart-scrollbar {
+	scrollbar-color: #a3a3a3 #d4d4d4;
+}
