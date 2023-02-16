@@ -16,6 +16,7 @@
 !/.vscode/extensions.json
 
 # Include frontend config files.
+!/.env.example
 !/.prettierrc.json
 !/package.json
 !/pnpm-lock.yaml
@@ -38,3 +39,7 @@
 !/src/**/*.tsx
 !/src/assets/*
 /src/assets/.DS_Store
+
+# Include supabase files.
+!/supabase/
+!/supabase/**
