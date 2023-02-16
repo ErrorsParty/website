@@ -1,0 +1,9 @@
+*
+
+# Include gitignore file.
+!/.gitignore
+
+# Include README and LICENSE files.
+!/README.md
+!/LICENSE
+
