@@ -1,0 +1,14 @@
+name: deploy_pages
+
+on:
+  workflow_call:
+    secrets:
+      PERSONAL_ACCESS_TOKEN:
+        required: true
+    inputs:
+      REPOSITORY:
+        required: true
+        type: string
+      CNAME:
+        required: true
+        type: string

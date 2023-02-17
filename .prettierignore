@@ -1,0 +1,27 @@
+# Don't prettify anything.
+*
+
+# Prettify source files.
+!/src/
+!/src/**/
+!/src/**/*
+!/tests/
+!/tests/**/
+!/tests/**/*
+**/*.gen.*
+**/gen/
+
+# Prettify frontend configuration files.
+!/.eslintrc.js
+!/.prettierrc.json
+!/postcss.config.js
+!/tailwind.config.js
+!/tsconfig.json
+!/tsconfig.test.json
+!/vite.config.ts
+!/vitest.config.ts
+
+# If you can, prettify github workflows.
+!/.github/
+!/.github/workflows/
+!/.github/workflows/*.yml
