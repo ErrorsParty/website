@@ -12,7 +12,7 @@ jobs:
   call-workflow-supabase-deploy-production:
     uses: ./.github/workflows/supabase_migrations.yml
     needs: [call-workflow-tests]
-    if: ${{ vars.DEPLOY_SUPABASE_PRODUCTION == 'y' && github.repository == 'ErrorsParty/website' && github.ref == 'refs/heads/prod' }}
+    if: ${{ vars.DEPLOY_SUPABASE_PRODUCTION == 'y' && github.repository == vars.SELF_REPOSITORY && github.ref == 'refs/heads/prod' }}
     permissions:
       contents: write
       pull-requests: write
@@ -25,7 +25,7 @@ jobs:
   call-workflow-supabase-deploy-staging:
     uses: ./.github/workflows/supabase_migrations.yml
     needs: [call-workflow-tests]
-    if: ${{ vars.DEPLOY_SUPABASE_STAGING == 'y' && github.repository == 'ErrorsParty/website' && github.ref == 'refs/heads/staging' }}
+    if: ${{ vars.DEPLOY_SUPABASE_STAGING == 'y' && github.repository == vars.SELF_REPOSITORY && github.ref == 'refs/heads/staging' }}
     permissions:
       contents: write
       pull-requests: write
