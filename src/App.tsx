@@ -29,7 +29,7 @@ const App: Component = () => {
 	return (
 		<div>
 			<Show when={!loading()} fallback={<div class="italic">Loading...</div>}>
-				<Show when={error() !== undefined} fallback={<div class="text-red-500">{error()}</div>}>
+				<Show when={error() === undefined} fallback={<div class="text-red-500">{error()}</div>}>
 					<table class="dui-table">
 						<thead>
 							<tr>
