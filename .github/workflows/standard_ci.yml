@@ -34,8 +34,10 @@ jobs:
       REPOSITORY: ${{ vars.DEPLOY_PAGES_STAGING_REPOSITORY }}
       CNAME: ${{ vars.DEPLOY_PAGES_STAGING_CNAME }}
       DOTENV: ${{ vars.VITE_ENVIRONMENT_STAGING }}
+      COMMITTER_NAME: ${{ VARS.DEPLOY_PAGES_STAGING_COMMITTER_NAME }}
+      COMMITTER_EMAIL: ${{ VARS.DEPLOY_PAGES_STAGING_COMMITTER_EMAIL }}
     secrets:
-      GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      KEY: ${{ secrets.DEPLOY_PAGES_STAGING_KEY }}
 
   call-workflow-pages-deploy-production:
     uses: ./.github/workflows/deploy_pages.yml
@@ -45,5 +47,7 @@ jobs:
       REPOSITORY: ${{ vars.DEPLOY_PAGES_PRODUCTION_REPOSITORY }}
       CNAME: ${{ vars.DEPLOY_PAGES_PRODUCTION_CNAME }}
       DOTENV: ${{ vars.VITE_ENVIRONMENT_PRODUCTION }}
+      COMMITTER_NAME: ${{ VARS.DEPLOY_PAGES_PRODUCTION_COMMITTER_NAME }}
+      COMMITTER_EMAIL: ${{ VARS.DEPLOY_PAGES_PRODUCTION_COMMITTER_EMAIL }}
     secrets:
-      GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      KEY: ${{ secrets.DEPLOY_PAGES_PRODUCTION_KEY }}
