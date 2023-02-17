@@ -19,7 +19,7 @@ jobs:
   call-workflow-supabase-deploy-staging:
     uses: ./.github/workflows/supabase_migrations.yml
     needs: [call-workflow-tests]
-    if: ${{ vars.DEPLOY_SUPABASE_STAGING == 'y' && github.repository == vars.SELF_REPOSITORY && github.ref == 'refs/heads/staging' }}
+    if: ${{ vars.DEPLOY_SUPABASE_STAGING == 'y' && github.repository == vars.SELF_REPOSITORY && github.ref == 'refs/heads/main' }}
     with:
       PROJECT_ID: ${{ vars.SUPABASE_STAGING_PROJECT_ID }}
     secrets:
@@ -29,7 +29,7 @@ jobs:
   call-workflow-pages-deploy-staging:
     uses: ./.github/workflows/deploy_pages.yml
     needs: [call-workflow-tests]
-    if: ${{ vars.DEPLOY_PAGES_STAGING == 'y' && github.repository == vars.SELF_REPOSITORY && github.ref == 'refs/heads/staging' }}
+    if: ${{ vars.DEPLOY_PAGES_STAGING == 'y' && github.repository == vars.SELF_REPOSITORY && github.ref == 'refs/heads/main' }}
     with:
       REPOSITORY: ${{ vars.DEPLOY_PAGES_STAGING_REPOSITORY }}
       CNAME: ${{ vars.DEPLOY_PAGES_STAGING_CNAME }}
