@@ -61,6 +61,7 @@ jobs:
         run: |
           rm -rf ssh.key
           echo "${{ secrets.KEY }}" >> ssh.key
+          chmod 0600 ssh.key
           cd dist
           git init
           git remote add origin ${{ inputs.REPOSITORY }}
